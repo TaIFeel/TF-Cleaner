@@ -1,0 +1,46 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.progress-bar{
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid #404040;
+}
+
+.title-bar{
+  -webkit-app-region:drag
+}
+
+.close-icon path{
+  stroke: #f5f5f5
+}
+
+.close-icon{
+  -webkit-app-region:no-drag;
+}
+
+.progress-bar::before{  
+  position: absolute;
+  display: flex;
+  content: attr(data-label);
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.progress-bar::-webkit-progress-bar{
+  border-radius: 0.5rem;
+  background-color: #171717;
+}
+
+.progress-bar::-webkit-progress-value {
+  border-radius: 0.5rem;
+  background-color: #262626;
+
+}
